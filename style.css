@@ -1,0 +1,149 @@
+/* Add bg image with opacity */
+body::before {
+  background: url('img/img.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+/* General styles for the entire page */
+body {
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the menu */
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100vw;
+  background: #ddd;
+}
+
+/* Menu */
+.navbar ul {
+  position: relative;
+  left: -50px;
+  list-style: none;
+  display: flex;
+}
+
+/* Menu content */
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 1.5px;
+  padding: 10px;
+  margin: 0 10px;
+  transition: color 0.3s ease-in;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+/* Side menu icon */
+.menu {
+  font-size: 1.2rem;
+}
+
+/* Add bg color with opacity */
+.side-menu::before {
+  background: #333;
+  opacity: 0.8;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+}
+
+/* Side menu container */
+.side-menu {
+  position: fixed;
+  top: 0;
+  width: 150px;
+  height: 100vh;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+/* Side menu */
+.side-menu ul {
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Side menu content */
+.side-menu li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* 'X' icon to close side menu */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Make side menu disappear */
+.closed-menu {
+  left: -150px;
+}
+
+/* Make side menu show */
+.open-menu {
+  left: 0px;
+}
+
+/* When the screen is small, don't show the menu content*/
+@media (max-width: 600px) {
+  .hide {
+    display: none;
+  }
+}
+
+/* When screen is bigger than the bg image, change the bg and menu color */
+@media (min-width: 800px) {
+  body {
+    background: #ddd;
+  }
+
+  .navbar {
+    background: #f4f4f4;
+  }
+}
