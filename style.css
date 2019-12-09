@@ -47,7 +47,7 @@ body {
 }
 
 /* Menu content */
-.navbar li a {
+.navbar li {
   text-decoration: none;
   color: #333;
   letter-spacing: 1.5px;
@@ -57,6 +57,14 @@ body {
 }
 
 .navbar li a:hover {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
   color: white;
 }
 
