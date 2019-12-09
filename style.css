@@ -60,6 +60,22 @@ body {
   color: white;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: color 0.3s ease-in;
+  margin: 0 10px;
+}
+
+button:hover {
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
 /* Side menu icon */
 .menu {
   font-size: 1.2rem;
