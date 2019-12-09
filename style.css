@@ -60,19 +60,6 @@ body {
   color: white;
 }
 
-button {
-  color: #333;
-  cursor: pointer;
-  padding: 10px;
-  margin: 0 10px;
-  transition: color 0.3s ease-in;  
-  border: none;
-}
-
-button:hover {
-  color: white;
-}
-
 /* Side menu icon */
 .menu {
   font-size: 1.2rem;
